@@ -1,5 +1,5 @@
 document.querySelector('button')
-  .addEventListener('click', (event) => {
+  .addEventListener('', (event) => {
     // Config HTML
     const $botao = event.target;
     const $onda = document.createElement('span');
