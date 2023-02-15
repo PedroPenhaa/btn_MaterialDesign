@@ -1,12 +1,12 @@
 document.querySelector('button')
   .addEventListener('click', (event) => {
-    // 1 - Preparando o HTML
+    // Config HTML
     const $botao = event.target;
     const $onda = document.createElement('span');
     $onda.classList.add('onda');
     $botao.insertAdjacentElement('beforeend', $onda);
 
-    // 2 - valores de posicao
+    // Position
     const posicoesDoBotao = $botao.getBoundingClientRect();
 
     const topo = Math.abs(posicoesDoBotao.top - event.clientY);
@@ -19,8 +19,7 @@ document.querySelector('button')
 
     $onda.style.setProperty('--opacity', 1); 
 
-
-    // 3 limpa efeito
+    // Clear effect
     function limpaEfeito() {
       $onda.removeEventListener('transitionend', limpaEfeito)
       $onda.style.setProperty('--opacity', 0); 
